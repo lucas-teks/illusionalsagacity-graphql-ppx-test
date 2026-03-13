@@ -4,11 +4,38 @@
     "dir": "src",
     "subdirs": true
   },
+  "jsx": {
+    "version": 4
+  },
   "package-specs": {
     "module": "esmodule",
     "in-source": true
   },
   "suffix": ".res.mjs",
-  "dependencies": [],
-  "compiler-flags": []
+  "compiler-flags": [],
+  "dependencies": [
+    "@rescript/react",
+    "rescript-apollo-client",
+    "@reasonml-community/graphql-ppx"
+  ],
+  "ppx-flags": [
+    "@reasonml-community/graphql-ppx/ppx"
+  ],
+  "graphql": {
+    "schema": "graphql_schema.json",
+    "apolloMode": true,
+    "extendMutation": "ApolloClient.GraphQL_PPX.ExtendMutation",
+    "extendQuery": "ApolloClient.GraphQL_PPX.ExtendQuery",
+    "extendSubscription": "ApolloClient.GraphQL_PPX.ExtendSubscription",
+    "templateTagReturnType": "ApolloClient.GraphQL_PPX.templateTagReturnType",
+    "templateTagImport": "gql",
+    "templateTagLocation": "@apollo/client",
+    "templateTagIsFunction": true,
+    "custom-fields": {
+      "Datetime": "Scalar.Datetime",
+      "Text": "Scalar.Text",
+      "CKU": "Scalar.CKU"
+    },
+    "uncurried": true
+  }
 }
