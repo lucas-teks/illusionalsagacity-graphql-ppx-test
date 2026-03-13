@@ -12,6 +12,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "rescript": "12.2.0"
+    "rescript": "12.2.0",
+    "@apollo/client": "3.13.8",
+    "@reasonml-community/graphql-ppx": "npm:@illusionalsagacity/graphql-ppx@2.0.0-rescript12.6",
+    "graphql": "16.11.0",
+    "rescript-apollo-client": "5.0.0"
   }
 }
