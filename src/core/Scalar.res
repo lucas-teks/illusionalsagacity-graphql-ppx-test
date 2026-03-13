@@ -10,7 +10,7 @@ module CKU = {
   let parse = json => {
     switch json
     ->JSON.Decode.string
-    ->Option.flatMap(cku => cku->Uuid.fromString)
+    ->Option.flatMap(Uuid.fromString)
     ->Option.map(uuid => (uuid->Uuid.version, uuid->Uuid.toString)) {
     | exception _ => throw(CannotParseCku)
     | Some(4, uuidv4) => uuidv4
@@ -18,7 +18,7 @@ module CKU = {
     }
   }
   let serialize = cku => {
-    switch cku->Uuid.fromString->Option.map(v => Uuid.version(v)) {
+    switch cku->Uuid.fromString->Option.map(Uuid.version) {
     | Some(4) => cku->JSON.Encode.string
     | _ => throw(CannotSerializeCku)
     }

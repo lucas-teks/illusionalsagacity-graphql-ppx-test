@@ -4,3 +4,5 @@
 .bsb.lock
 .merlin
 **/*.res.mjs
+*.res.mjs
+.graphql_ppx_cache

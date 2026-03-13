@@ -32,8 +32,6 @@
     "templateTagLocation": "@apollo/client",
     "templateTagIsFunction": true,
     "custom-fields": {
-      "Datetime": "Scalar.Datetime",
-      "Text": "Scalar.Text",
       "CKU": "Scalar.CKU"
     },
     "uncurried": true

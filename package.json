@@ -2,6 +2,8 @@
   "name": "graphql-ppx-fork-test",
   "version": "0.0.0",
   "scripts": {
+    "fix:graphql-ppx": "node scripts/fix-graphql-ppx-fork.mjs",
+    "postinstall": "yarn fix:graphql-ppx && yarn res:clean",
     "res:build": "rescript",
     "res:clean": "rescript clean",
     "res:dev": "rescript watch"
