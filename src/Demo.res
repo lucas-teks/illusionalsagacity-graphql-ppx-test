@@ -32,7 +32,7 @@ let with_factory_helpers__getVariantByCkuAndShopId = (client: ApolloClient.t, ~c
   client.query(
     VariantsByCkuQuery.makeVariables(
       ~cku=cku->Scalar.CKU.serialize,
-      VariantsByCkuQuery.makeInputObjectInputVariantsByCkuQueryFilter(
+      ~filterBy=VariantsByCkuQuery.makeInputObjectInputVariantsByCkuQueryFilter(
         ~shopIds=VariantsByCkuQuery.makeInputObjectInFilter(~_in=[shopId]),
       ),
     ),
